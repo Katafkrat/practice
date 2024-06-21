@@ -1,5 +1,5 @@
-.app {
-    &__header {
+
+    header {
         background-color: #333;
         color: white;
         padding: 10px 20px;
@@ -12,28 +12,28 @@
 
     }
 
-	&__logo {
+	.logo {
 		font-size: 24px;
 		font-weight: bold;
 		
 	}
 
-    &__signIn {
+    .signIn {
 		position: absolute;
         right: 10px;
 		top: 20px;
     }
 
-    &__movie {
+   .movie {
         font-size: 20px;
         margin-top: 40px; /* Додає відступ від заголовка */
 		padding-left: 50px;
     }
 
-    &__movieDescription {
+    .movieDescription {
         font-size: 16px;
         margin-top: 10px;
 		padding-left: 50px;
         color: #ccc;
     }
-}
+

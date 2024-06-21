@@ -2,21 +2,21 @@ import './Header.scss'
 
 const Header = () => {
 	return (
-		<header className="app__header">
-				<div className="app__logo">
+		<header>
+				<div className="logo">
 					<a href="#">
 						MovieHostage
 					</a>
 				</div>
-				<div className="app__signIn">
+				<div className="signIn">
 					<a href="#">
 						Sign in
 					</a>
 				</div>
-			<div className="app__movie">
+			<div className="movie">
 				Movie
 			</div>
-			<div className="app__movieDescription">
+			<div className="movieDescription">
 				Desctiption
 			</div>
 		</header>
