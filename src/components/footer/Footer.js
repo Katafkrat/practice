@@ -1,6 +1,6 @@
-import './AppFooter.scss'
+import './Footer.scss'
 
-const AppFooter = () => {
+const Footer = () => {
 	return (
 		<footer className="app__footer">
 			NScorporation 2024
@@ -8,4 +8,4 @@ const AppFooter = () => {
 	)
 }
 
-export default AppFooter;
+export default Footer;

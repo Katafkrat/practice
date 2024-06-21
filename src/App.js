@@ -1,17 +1,17 @@
-import AppHeader from './components/appHeader/AppHeader'; 
-import AppFooter from './components/appFooter/AppFooter';
-import MovieContainer from './components/movieContainer/MovieContainer';
+import Header from './components/header/Header';
+import Footer from './components/footer/Footer';
+import HomePage from './components/homePage/HomePage';
 
 import './App.css';
 
 function App() {
   return (
     <div className="app">
-      <AppHeader/>
-      <body>
-        <MovieContainer/>
-      </body>
-      <AppFooter/>
+      <Header/>
+      <main>
+        <HomePage/>
+      </main>
+      <Footer/>
     </div>
   );
 }
