@@ -3,24 +3,18 @@ import './Header.scss'
 const Header = () => {
 	return (
 		<header>
-				<div className="logo">
-					<a href="#">
+			<div className="logo">
+				<a href="#">
 						MovieHostage
-					</a>
-				</div>
-				<div className="signIn">
-					<a href="#">
-						Sign in
-					</a>
-				</div>
-			<div className="movie">
-				Movie
+				</a>
 			</div>
-			<div className="movieDescription">
-				Desctiption
+			<div className="signIn">
+				<a href="#">
+						Sign in
+				</a>
 			</div>
 		</header>
 	)
 }
 
-export default Header;
+export default Header
