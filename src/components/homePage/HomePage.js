@@ -1,5 +1,4 @@
-import MovieCard from '../movieCard/MovieCard'
-import CastCard from '../castCard/CastCard'
+import Card from '../card/Card'
 import SearchPanel from '../searchPanel/SearchPanel'
 
 import './HomePage.scss'
@@ -8,43 +7,46 @@ const HomePage = () => {
 	return (
 		<div>
 			<SearchPanel/>
+			<span>Featured Movies</span>
 			<div className="movie__list">
-				Featured Movies
 				<ul className="movie__grid">
-					<MovieCard/>
-					<MovieCard/>
-					<MovieCard/>
-					<MovieCard/>
-					<MovieCard/>
-					<MovieCard/>
-					<MovieCard/>
-					<MovieCard/>
+					<Card/>
+					<Card/>
+					<Card/>
+					<Card/>
+					<Card/>
+					<Card/>
+					<Card/>
+					<Card/>
+					<Card/>
 				</ul>
 			</div>
+			<span>New Arrival</span>
 			<div className='movie__list'>
-				New Arrival
 				<ul className="movie__grid">
-					<MovieCard/>
-					<MovieCard/>
-					<MovieCard/>
-					<MovieCard/>
-					<MovieCard/>
-					<MovieCard/>
-					<MovieCard/>
-					<MovieCard/>
+					<Card/>
+					<Card/>
+					<Card/>
+					<Card/>
+					<Card/>
+					<Card/>
+					<Card/>
+					<Card/>
+					<Card/>
 				</ul>
 			</div>
+			<span>Featured Cast</span>
 			<div className='cast__list'>
-				Featured Cast
 				<ul className="cast__grid">
-					<CastCard/>
-					<CastCard/>
-					<CastCard/>
-					<CastCard/>
-					<CastCard/>
-					<CastCard/>
-					<CastCard/>
-					<CastCard/>
+					<Card/>
+					<Card/>
+					<Card/>
+					<Card/>
+					<Card/>
+					<Card/>
+					<Card/>
+					<Card/>
+					<Card/>
 				</ul>
 			</div>
 		</div>
