@@ -10,43 +10,43 @@ const HomePage = () => {
 			<span>Featured Movies</span>
 			<div className="movie__list">
 				<ul className="movie__grid">
-					<Card/>
-					<Card/>
-					<Card/>
-					<Card/>
-					<Card/>
-					<Card/>
-					<Card/>
-					<Card/>
-					<Card/>
+					<Card cast={false}/>
+					<Card cast={false}/>
+					<Card cast={false}/>
+					<Card cast={false}/>
+					<Card cast={false}/>
+					<Card cast={false}/>
+					<Card cast={false}/>
+					<Card cast={false}/>
+					<Card cast={false}/>
 				</ul>
 			</div>
 			<span>New Arrival</span>
 			<div className='movie__list'>
 				<ul className="movie__grid">
-					<Card/>
-					<Card/>
-					<Card/>
-					<Card/>
-					<Card/>
-					<Card/>
-					<Card/>
-					<Card/>
-					<Card/>
+					<Card cast={false}/>
+					<Card cast={false}/>
+					<Card cast={false}/>
+					<Card cast={false}/>
+					<Card cast={false}/>
+					<Card cast={false}/>
+					<Card cast={false}/>
+					<Card cast={false}/>
+					<Card cast={false}/>
 				</ul>
 			</div>
 			<span>Featured Cast</span>
 			<div className='cast__list'>
 				<ul className="cast__grid">
-					<Card/>
-					<Card/>
-					<Card/>
-					<Card/>
-					<Card/>
-					<Card/>
-					<Card/>
-					<Card/>
-					<Card/>
+					<Card cast={false}/>
+					<Card cast={false}/>
+					<Card cast={false}/>
+					<Card cast={false}/>
+					<Card cast={false}/>
+					<Card cast={false}/>
+					<Card cast={false}/>
+					<Card cast={false}/>
+					<Card cast={false}/>
 				</ul>
 			</div>
 		</div>
