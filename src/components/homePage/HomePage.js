@@ -38,15 +38,15 @@ const HomePage = () => {
 			<span>Featured Cast</span>
 			<div className='cast__list'>
 				<ul className="cast__grid">
-					<Card cast={false}/>
-					<Card cast={false}/>
-					<Card cast={false}/>
-					<Card cast={false}/>
-					<Card cast={false}/>
-					<Card cast={false}/>
-					<Card cast={false}/>
-					<Card cast={false}/>
-					<Card cast={false}/>
+					<Card cast={true}/>
+					<Card cast={true}/>
+					<Card cast={true}/>
+					<Card cast={true}/>
+					<Card cast={true}/>
+					<Card cast={true}/>
+					<Card cast={true}/>
+					<Card cast={true}/>
+					<Card cast={true}/>
 				</ul>
 			</div>
 		</div>
