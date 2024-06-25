@@ -5,12 +5,12 @@ const Header = () => {
 		<header>
 			<div className="logo">
 				<a href="#">
-						MovieHostage
+					MovieHostage
 				</a>
 			</div>
 			<div className="signIn">
 				<a href="#">
-						Sign in
+					Sign in
 				</a>
 			</div>
 		</header>

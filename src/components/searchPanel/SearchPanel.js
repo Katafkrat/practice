@@ -8,7 +8,7 @@ const SearchPanel = () => {
 				placeholder="Search for movies..."
 			/>
 			<button>
-			Search
+				Search
 			</button>
 		</div>
 	)
