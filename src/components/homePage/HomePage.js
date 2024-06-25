@@ -1,4 +1,3 @@
-import Card from '../card/Card'
 import SearchPanel from '../searchPanel/SearchPanel'
 import MovieListStructure from '../movieListStructure/MovieListStructure'
 
