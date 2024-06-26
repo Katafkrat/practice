@@ -10,9 +10,13 @@ const apiClient = axios.create({
 export const getPopularMovies = async () => {
 	try {
 		const res = await apiClient.get('movie/popular')
-		console.log(res.data)
 
-		return res.data
+		const movieObjectArray = res.data.results.map(movie => ({
+			imageURL: movie.poster_path,
+			title: movie.title
+		}))
+
+		return movieObjectArray
 	} catch (error) {
 		console.error('Error fetching popular movies:', error)
 		throw error
