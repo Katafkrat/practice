@@ -1,5 +1,8 @@
-import './Card.scss'
+import PropTypes from 'prop-types'
+
 import { getPopularMovies } from '../../services/APIService.js'
+
+import './Card.scss'
 
 const Card = ({ imageURL, title }) => {
 	getPopularMovies()
@@ -10,6 +13,11 @@ const Card = ({ imageURL, title }) => {
 			<div className="card__title">Cast</div>
 		</li>
 	)
+}
+
+Card.propTypes = {
+	imageURL: PropTypes.string.isRequired,
+	title: PropTypes.string.isRequired
 }
 
 export default Card
