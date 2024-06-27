@@ -7,13 +7,13 @@ const apiClient = axios.create({
 	}
 })
 
-export const getPopularMoviesAPI = async () => {
+export const getMoviesAPI = async selector => {
 	try {
-		const res = await apiClient.get('movie/popular')
+		const res = await apiClient.get(`movie/${selector}`)
 
 		return res.data
 	} catch (error) {
-		console.error('Error fetching popular movies:', error)
+		console.error('Error fetching movies:', error)
 		throw error
 	}
 }
