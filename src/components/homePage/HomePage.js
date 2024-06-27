@@ -1,15 +1,29 @@
+import { useState, useEffect } from 'react'
+
 import SearchPanel from '../searchPanel/SearchPanel'
-import MovieListStructure from '../movieListStructure/MovieListStructure'
+import MovieList from '../movieList/MovieList'
+import { getPopularMoviesAPI } from "../../services/APIService"
 
 import './HomePage.scss'
 
 const HomePage = () => {
+	const [movies, setMovies] = useState([])
+	const getPopularMovies = () => {
+		getPopularMoviesAPI().then(data => {
+			setMovies(data)
+		}).catch(error => {
+			console.error('Error fetching popular movies:', error)
+		})
+	}
+
+	useEffect(() => getPopularMovies, [])
+
 	return (
 		<div>
 			<SearchPanel />
-			<MovieListStructure listName={'Featured Movies'} />
-			<MovieListStructure listName={'New Arrival'} />
-			<MovieListStructure listName={'Featured Cast'} />
+			<MovieList title={'Featured Movies'} data={movies.results} />
+			<MovieList title={'New Arrival'} data={movies.results} />
+			<MovieList title={'Featured Cast'} data={movies.results} />
 		</div>
 	)
 }
