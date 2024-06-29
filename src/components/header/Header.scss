@@ -3,10 +3,10 @@ header {
     color: white;
     padding: 10px 20px;
     display: flex;
-    justify-content: space-between;
     width: 100%;
     align-items: center;
     box-sizing: border-box;
+
 
     a {
         color: white;
@@ -19,8 +19,6 @@ header {
     }
 
     .signIn {
-        position: absolute;
-        right: 10px;
-        top: 15px;
+        margin-left: auto;
     }
 }

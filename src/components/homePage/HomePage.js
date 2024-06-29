@@ -11,33 +11,17 @@ const HomePage = () => {
 	const [topRatedMovies, setTopRatedMovies] = useState([])
 	const [upcomingMovies, setUpcomingMovies] = useState([])
 
-	const getPopularMovies = () => {
-		getMoviesAPI('popular').then(data => {
-			setPopularMovies(data)
+	const getMovies = (title, selector) => {
+		getMoviesAPI(selector).then(data => {
+			title(data)
 		}).catch(error => {
 			console.error('Error fetching popular movies:', error)
 		})
 	}
 
-	const getTopRatedMovies = () => {
-		getMoviesAPI('top_rated').then(data => {
-			setTopRatedMovies(data)
-		}).catch(error => {
-			console.error('Error fetching top rated movies:', error)
-		})
-	}
-
-	const getUpcomingMovies = () => {
-		getMoviesAPI('upcoming').then(data => {
-			setUpcomingMovies(data)
-		}).catch(error => {
-			console.error('Error fetching upcoming movies:', error)
-		})
-	}
-
-	useEffect(() => getPopularMovies, [])
-	useEffect(() => getTopRatedMovies, [])
-	useEffect(() => getUpcomingMovies, [])
+	useEffect(() => getMovies(setPopularMovies, 'popular'), [])
+	useEffect(() => getMovies(setTopRatedMovies, 'top_rated'), [])
+	useEffect(() => getMovies(setUpcomingMovies, 'upcoming'), [])
 
 	return (
 		<div>

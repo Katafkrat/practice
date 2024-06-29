@@ -1,13 +1,19 @@
+import { Link } from 'react-router-dom'
+
 import './Header.scss'
 
 const Header = () => {
 	return (
 		<header>
-			<div className="logo">
-				<a href="#">
-					MovieHostage
-				</a>
-			</div>
+			<Link to={'/'}>
+				<div className="logo">
+					<a href="#">
+						MovieHostage
+					</a>
+				</div>
+			</Link>
+			<nav>
+			</nav>
 			<div className="signIn">
 				<a href="#">
 					Sign in
