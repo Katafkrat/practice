@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types'
 
 import './MovieList.scss'
 
@@ -19,6 +20,11 @@ const MovieList = ({ title, data = [] }) => {
 			</ul>
 		</div>
 	)
+}
+
+MovieList.propTypes = {
+	data: PropTypes.array.isRequired,
+	title: PropTypes.string
 }
 
 export default MovieList

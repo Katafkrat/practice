@@ -1,0 +1,37 @@
+.slider {
+	&__container {
+		width: 100%;
+		margin: 0 auto;
+		padding: 40px 0;
+		text-align: center;
+		align-items: center;
+
+		h2 {
+			margin-bottom: 20px;
+			color: #364F6B;
+		}
+	}
+
+	&__slide {
+		padding: 0 10px;
+		width: 300px;
+		height: 450px;
+
+		img {
+			display: block;
+			margin: auto;
+			height: auto;
+			border-radius: 8px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+		}
+
+		&__title {
+			padding-top: 10px;
+			margin-bottom: 30px;
+			font-size: 16px;
+			font-weight: bold;
+			color: #364F6B;
+		}
+	}
+}

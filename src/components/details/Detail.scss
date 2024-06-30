@@ -11,5 +11,16 @@
 			object-fit: cover;
 			border-radius: 8px;
 		}
+
+		button {
+			padding: 6px 12px;
+			margin-bottom: 10px;
+			font-size: 16px;
+			background-color: #2F3645;
+			color: white;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+		}
 	}
 }
