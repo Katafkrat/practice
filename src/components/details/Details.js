@@ -19,8 +19,8 @@ const Details = () => {
 		})
 	}
 
-	useEffect(() => getMovieByID(setMovie, id), [])
-	useEffect(() => getMovieByID(setRecomendedMovies, `${id}/recommendations`), [])
+	useEffect(() => getMovieByID(setMovie, id), [id])
+	useEffect(() => getMovieByID(setRecomendedMovies, `${id}/recommendations`), [id])
 
 	const navigate = useNavigate()
 
