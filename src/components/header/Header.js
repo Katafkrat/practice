@@ -7,9 +7,7 @@ const Header = () => {
 		<header>
 			<Link to={'/'}>
 				<div className="logo">
-					<a href="#">
-						MovieHostage
-					</a>
+					MovieHostage
 				</div>
 			</Link>
 		</header>
