@@ -18,7 +18,7 @@ const MovieSlider = ({ data = [] }) => {
 		slidesToShow: 3,
 		slidesToScroll: 3,
 		focusOnSelect: false,
-		arrows: false,
+		arrows: true,
 		beforeChange: () => setIsScrolling(true),
 		afterChange: () => setIsScrolling(false),
 		responsive: [
@@ -29,6 +29,7 @@ const MovieSlider = ({ data = [] }) => {
 					slidesToScroll: 2,
 					infinite: true,
 					dots: true,
+					arrows: false
 				},
 			},
 			{
@@ -38,6 +39,7 @@ const MovieSlider = ({ data = [] }) => {
 					slidesToScroll: 1,
 					infinite: true,
 					dots: false,
+					arrows: false
 				},
 			},
 		],
@@ -46,7 +48,7 @@ const MovieSlider = ({ data = [] }) => {
 	return (
 		<div className="slider__container">
 			<h2>Recommendations</h2>
-			<Slider key={data.length} {...settings}>
+			<Slider key={data?.length} {...settings}>
 				{data?.map(movie => (
 					<div key={movie.id} className="slider__slide">
 						<Link to={`/movie/${movie?.id}`} onClick={e => isScrolling && e.preventDefault()}>

@@ -12,13 +12,6 @@ const Header = () => {
 					</a>
 				</div>
 			</Link>
-			<nav>
-			</nav>
-			<div className="signIn">
-				<a href="#">
-					Sign in
-				</a>
-			</div>
 		</header>
 	)
 }

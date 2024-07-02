@@ -51,6 +51,7 @@
 		position: relative;
 		font-size: 18px;
 		font-weight: bold;
+		max-width: 150px;
 	}
 }
 
@@ -64,7 +65,9 @@ img {
 h2 {
 	font-size: 24px;
 	font-weight: bold;
-	text-align: center;
+	text-align: left;
+	padding-left: 30px;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 a {
