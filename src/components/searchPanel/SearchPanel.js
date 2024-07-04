@@ -1,13 +1,19 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useDebounce } from "@uidotdev/usehooks"
 
 import './SearchPanel.scss'
 
 const SearchPanel = ({ onSubmit }) => {
 	const [input, setInput] = useState('')
+	const debouncedSearchTerm = useDebounce(input, 500)
 
 	const handleInputChange = event => {
 		setInput(event.target.value)
 	}
+
+	useEffect(() => {
+		onSubmit(debouncedSearchTerm)
+	}, [debouncedSearchTerm])
 
 	return (
 		<div className="search__panel">
@@ -17,9 +23,6 @@ const SearchPanel = ({ onSubmit }) => {
 				value={input}
 				onChange={handleInputChange}
 			/>
-			<button onClick={() => onSubmit(input)}>
-				Search
-			</button>
 		</div>
 	)
 }
