@@ -3,6 +3,8 @@ import Slider from 'react-slick'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
+import noImagePlaceholder from '../../resource/No-Image-Placeholder.png'
+
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 
@@ -52,7 +54,9 @@ const MovieSlider = ({ data = [] }) => {
 				{data?.map(movie => (
 					<div key={movie.id} className="slider__slide">
 						<Link to={`/movie/${movie?.id}`} onClick={e => isScrolling && e.preventDefault()}>
-							<img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
+							<img src={movie?.poster_path
+								? `https://image.tmdb.org/t/p/w500${movie?.poster_path}`
+								: noImagePlaceholder} alt={movie?.title} />
 							<div className="slider__title">{movie.title}</div>
 						</Link>
 					</div>

@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import { useState, useEffect } from 'react'
 
 import SearchPanel from '../../components/searchPanel/SearchPanel'
@@ -38,7 +39,7 @@ const HomePage = () => {
 	return (
 		<div>
 			<SearchPanel onSubmit={handleSearch} />
-			<MovieList data={searchMovies?.results} />
+			{searchMovies?.results?.length > 0 ? <MovieList title={'Results'} data={searchMovies?.results} /> : null}
 			<MovieList title={'Featured Movies'} data={movies.popularMovies?.results} />
 			<MovieList title={'Top Rated'} data={movies.topRatedMovies?.results} />
 			<MovieList title={'Upcoming'} data={movies.upcomingMovies?.results} />

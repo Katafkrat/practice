@@ -9,9 +9,9 @@ const apiClient = axios.create({
 
 export const getMoviesAPI = async selector => {
 	try {
-		const res = await apiClient.get(`movie/${selector}`)
+		const { data } = await apiClient.get(`movie/${selector}`)
 
-		return res.data
+		return data
 	} catch (error) {
 		console.error('Error fetching movies:', error)
 		throw error
@@ -20,9 +20,9 @@ export const getMoviesAPI = async selector => {
 
 export const getMoviesByIdAPI = async id => {
 	try {
-		const res = await apiClient.get(`movie/${id}`)
+		const { data } = await apiClient.get(`movie/${id}`)
 
-		return res.data
+		return data
 	} catch (error) {
 		console.error('Error fetching movies:', error)
 		throw error
@@ -31,9 +31,9 @@ export const getMoviesByIdAPI = async id => {
 
 export const getMoviesRecommendationsAPI = async id => {
 	try {
-		const res = await apiClient.get(`movie/${id}/recommendations`)
+		const { data } = await apiClient.get(`movie/${id}/recommendations`)
 
-		return res.data
+		return data
 	} catch (error) {
 		console.error('Error fetching movies:', error)
 		throw error
@@ -42,13 +42,13 @@ export const getMoviesRecommendationsAPI = async id => {
 
 export const getMoviesSearchAPI = async query => {
 	try {
-		const res = await apiClient.get('/search/movie', {
+		const { data } = await apiClient.get('/search/movie', {
 			params: {
-				query: query
+				query
 			}
 		})
 
-		return res.data
+		return data
 	} catch (error) {
 		console.error('Error fetching movies:', error)
 		throw error
