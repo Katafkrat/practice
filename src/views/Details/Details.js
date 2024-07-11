@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 
-import { getMoviesByIdAPI, getMoviesRecommendationsAPI } from '../../services/APIService'
+import { getMoviesByIdAPI, getMoviesRecommendationsAPI } from '../../services/APIService.ts'
 import MovieSlider from '../../components/slider/Slider'
 
 import noImagePlaceholder from '../../resource/No-Image-Placeholder.png'

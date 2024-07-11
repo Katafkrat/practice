@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 
 import SearchPanel from '../../components/searchPanel/SearchPanel'
 import MovieList from '../../components/movieList/MovieList'
-import { getMoviesAPI, getMoviesSearchAPI } from "../../services/APIService"
+import { getMoviesAPI, getMoviesSearchAPI } from '../../services/APIService.ts'
 
 import './HomePage.scss'
 
